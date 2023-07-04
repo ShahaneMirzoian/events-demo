@@ -1,15 +1,30 @@
-{ 'description': 'Each time a customer clicks to "Add" to add a product to cart', 
-    'properties' : {
-        'source_type': { 'description': 'is whether the product was added from catalog or search', 
-                        'type': 'enum'}, 
-        'sku': { 'description': 'sku of the product', 
-                'type': 'numeric'}, 
-        'source_identifier': { 'description': 'the id of catalogue category or search query', 
-                                'type': 'text'}, 
-
-        'product_position': { 'description': 'the position of product in listing, starts from 1 counts from left to right top to bottom', 
-                               'type': 'numeric'}, 
-    },
-    'required': ['source_type','sku','source','source_identifier','product_position'], 
-    'title': 'Add To Cart Clicked', 
-    'type': 'object'}
+{
+   "description":"Each time a customer clicks to Add to add a product to cart",
+   "properties":{
+      "source_type":{
+         "description":"is whether the product was added from catalog or search",
+         "type":"enum"
+      },
+      "sku":{
+         "description":"sku of the product",
+         "type":"numeric"
+      },
+      "source_identifier":{
+         "description":"the id of catalogue category or search query",
+         "type":"text"
+      },
+      "product_position":{
+         "description":"the position of product in listing, starts from 1 counts from left to right top to bottom",
+         "type":"numeric"
+      }
+   },
+   "required":[
+      "source_type",
+      "sku",
+      "source",
+      "source_identifier",
+      "product_position"
+   ],
+   "title":"Add To Cart Clicked",
+   "type":"object"
+}
